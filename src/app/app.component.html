@@ -1,0 +1,25 @@
+<h1>Cyro Fernandes</h1>
+<h4>RA: 0050831921005</h4>
+<h2>Cotação do Bitcoin</h2>
+<table border="1">
+<thead>
+<tr>
+<th>Data/hora</th>
+<th>USD</th>
+<th>BRL</th>
+</tr>
+</thead>
+<tbody>
+<tr *ngFor="let rate of this.bitCoinServ.bitCoinRate">
+    <td>{{rate.time.updated}}</td>
+<td>
+  US$
+  {{rate.bpi.USD.rate_float}}
+</td>
+<td>
+  R$
+  {{rate.bpi.BRL.rate_float}}
+</td>
+</tr>
+</tbody>
+</table>
